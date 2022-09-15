@@ -1,0 +1,142 @@
+/*////////// Navigation /////////*/
+
+.logo {
+    width: 400px;
+}
+
+hr {
+    border-top: 5px solid black;
+}
+
+
+.links {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+#products_link_active {
+    background-color: yellow;
+    font-weight: bold;
+    width: 100px;
+    margin:auto;
+}
+
+#cart_link_active {
+    background-color: yellow;
+    font-weight: bold;
+    width: 60px;
+    margin:auto;
+}
+
+/*///////// Gallery Page ///////////*/
+
+.product_list {
+    margin:auto;
+    width:220px;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: normal;
+}
+
+.product {
+    color: black;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+.product:hover {
+    background-color:yellow;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.product_image {
+    display: block;
+    border: 3px solid #000000;
+    margin: auto;
+}
+
+.product_display_name {
+    text-decoration: underline;
+    text-decoration-color: gray;
+}
+
+/*//////////// Product Detail Page ////////////*/
+
+.product_info {
+    width: 200px;
+    margin: auto;
+}
+
+.options {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.dropdown_menu {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.product_summary {
+    display: flex;
+    justify-content:center;
+}
+
+.add_button {
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    width: 120px;
+    background-color: yellow;
+    border: 2px solid black;
+    margin-left: 30px;
+}
+
+/*////////// Cart //////////*/
+
+.cart_info {
+    width: 300px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.remove_button {
+    font-size: 10px;
+    text-decoration: underline;
+}
+
+.bottom_divider {
+    width: 800px;
+}
+
+.cart_summary {
+    width: 300px;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 200px;
+}
+
+.price {
+    font-size: 20px;
+}
+
+.checkout_button {
+    font-weight: bold;
+    text-align: center;
+    width: 120px;
+    background-color: yellow;
+    border: 2px solid black;
+    margin: auto;
+}
