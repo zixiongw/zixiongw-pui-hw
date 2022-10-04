@@ -1,10 +1,10 @@
 // Creating arrays of options for select elements
 
 const allGlazings = [
-    {name: 'Keep original', price: 0,},
-    {name: 'Sugar milk', price: 0,},
-    {name: 'Vanilla milk', price: 0.50,},
-    {name: 'Double chocolate', price: 1.50,}
+    {name: 'Keep original', price: '0',},
+    {name: 'Sugar milk', price: '0',},
+    {name: 'Vanilla milk', price: '0.50',},
+    {name: 'Double chocolate', price: '1.50',}
 ];
 
 const allPackSizes = [
