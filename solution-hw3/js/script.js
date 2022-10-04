@@ -50,7 +50,7 @@ function updatePrice() {
 dropdown1.addEventListener('change', glazingChange);
 dropdown2.addEventListener('change', packSizeChange);
 
-function glazingChange() {a
+function glazingChange() {
     glazingPrice = Number(this.value);
     updatePrice();
     console.log('You selected ' + this.value);
