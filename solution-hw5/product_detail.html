@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8">
+  <head>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Product Detail</title>
+    <script defer src="js/script.js"></script>
+    <script src="js/rollsData.js"></script>
+  </head>
+  
+  <body>
+
+    <div class="header">
+      <div class="header_left">
+        <a href=index.html>
+          <img class="logo" src="logo-01.svg" alt="Logo" width="200">
+        </a>
+      </div>  
+
+      <div class="header_right">
+        <div class="links">
+          <a href="index.html"><div class="nav_item" id="products_link_active">PRODUCTS</div></a>
+          <a href="cart.html"><div class="nav_item" id="cart_link">CART</div></a>
+        </div>
+        <hr>
+        <h2 id="roll_header_text">
+          Original cinnamon roll
+        </h2>
+      </div>
+    </div>
+
+
+    <div class="product_container">
+
+      <div class="product_container_left">
+        <img class="product_image" id='product_detail_image' src="product_images/original-cinnamon-roll.jpg" width="400" alt="Original Cinnamon Roll">
+      </div>
+
+      <div class="product_container_right">
+        <div class="product_info">
+          <p>Customize our delicious, hand-made cinnamon roll to your liking!</p>
+
+          <div class="options">
+
+            <div class="dropdown_menu">
+              <label for="glazing">Glazing:</label><br>
+              <select id="glazing" name="glazing">
+              </select>
+            </div>
+            
+            <div class="dropdown_menu">
+              <label for="pack_size">Pack size:</label><br>
+              <select id="pack_size" name="pack_size">
+              </select>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="product_summary">
+          <p id="realtime_price"></p>
+          <p id='add_to_cart' class="add_button">Add to Cart</p>
+        </div>
+
+      </div>
+
+
+    </div>
+  </body>
+</html>

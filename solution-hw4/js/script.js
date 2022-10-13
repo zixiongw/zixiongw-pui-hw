@@ -63,7 +63,7 @@ function updatePrice() {
     realtimePriceElement.innerText = '$ ' + String(price_rounded);
 }
 
-// Update price when changing selections
+// Update the price when changing selections
 
 dropdown1.addEventListener('change', glazingChange);
 dropdown2.addEventListener('change', packSizeChange);
@@ -84,6 +84,7 @@ function packSizeChange() {
 // Initial state
 updatePrice();
 
+// Cart information
 let cart = [];
 
 class Roll {
@@ -94,6 +95,8 @@ class Roll {
         this.basePrice = basePrice;
     }
 }
+
+// Adding item to cart
 
 const addButton = document.querySelector('#add_to_cart');
 
