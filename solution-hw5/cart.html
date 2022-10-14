@@ -4,6 +4,9 @@
   <head>
     <link rel="stylesheet" href="css/style.css">
     <title>Shopping Cart</title>
+    <script src="js/rollsData.js"></script>
+    <!-- <script defer src="js/script.js"></script> -->
+    <script defer src="js/cart_behavior.js"></script>
   </head>
   
   <body>
@@ -27,41 +30,35 @@
         </div>
       </div>
 
+    <!-- Cart Items -->
     <div class="cart_container">
-        <div class="cart_info">
-            <div>
-                <img class="product_image" src="product_images/original-cinnamon-roll.jpg" width="100" alt="Original Cinnamon Roll">
-            </div>
-            <div class="product_description">
-                <div class="product_name">Original Cinnamon Roll</div>
-                <div>Glazing: Keep original</div>
-                <div>Pack Size: 1</div>
-            </div>
-            <div class="price">$ 2.49</div>
+      
+      <template id="cart_item_template">
+        <div class="cart_item">
+          <div class="item_info">
+              <div>
+                  <img class="product_image" src="product_images/original-cinnamon-roll.jpg" width="100" alt="Original Cinnamon Roll">
+              </div>
+              <div class="product_description">
+                  <div class="product_name">Original Cinnamon Roll</div>
+                  <div class="product_glazing">Glazing: Keep original</div>
+                  <div class="product_pack_size">Pack Size: 1</div>
+              </div>
+              <div class="price" id="product_price">$ 2.49</div>
+          </div>
+          <a class="remove_button">Remove</a>
         </div>
-        <a class="remove_button">Remove</a>
+      </template>
 
-        <div class="cart_info">
-            <div>
-                <img class="product_image" src="product_images/double-chocolate-cinnamon-roll.jpg" width="100" alt="Original Cinnamon Roll">
-            </div>
-            <div class="product_description">
-                <div class="product_name">Double Chocolate Cinnamon Roll</div>
-                <div>Glazing: Milk sugar</div>
-                <div>Pack Size: 6</div>
-            </div>
-            <div class="price">$ 27.45</div>
+      <hr class="bottom_divider">
+      <div class="cart_summary">
+        <div class="price">
+          <div>Total</div>
+          <div id="total_price">$29.94</div>
         </div>
-        <a class="remove_button">Remove</a>
+        <p class="checkout_button">Checkout</p>
+      </div>
 
-        <hr class="bottom_divider">
-        <div class="cart_summary">
-            <div class="price">
-                <div>Total</div>
-                <div>$29.94</div>
-            </div>
-            <p class="checkout_button">Checkout</p>
-        </div>
     </div>
 
   </body>

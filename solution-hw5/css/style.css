@@ -149,7 +149,7 @@ a {
     float: right;
 }
 
-.cart_info {
+.item_info {
     display: flex;
     justify-content: space-between;
     margin-top: 25px;

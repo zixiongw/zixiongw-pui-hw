@@ -28,8 +28,8 @@ const allGlazings = [
 const allPackSizes = [
     {name: '1', price: 1,},
     {name: '3', price: 3,},
-    {name: '6', price: 6,},
-    {name: '12', price: 12,} 
+    {name: '6', price: 5,},
+    {name: '12', price: 10,} 
 ];
 
 // Populating dropdown fields with created arrays 
@@ -57,8 +57,8 @@ let glazingName = dropdown1.options[dropdown1.selectedIndex].text;
 
 function updatePrice() {
     let price = (basePrice + glazingPrice) * packSize;
-    console.log(price, glazingPrice, packSize);
     let price_rounded = price.toFixed(2);
+    console.log(price_rounded, glazingPrice, packSize);
     let realtimePriceElement = document.querySelector('#realtime_price');
     realtimePriceElement.innerText = '$ ' + String(price_rounded);
 }
