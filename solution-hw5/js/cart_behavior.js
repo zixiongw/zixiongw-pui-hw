@@ -100,7 +100,7 @@ function updateTotalPrice() {
         console.log(totalPrice);
     }
     totalPriceElement = document.querySelector('#total_price');
-    totalPriceElement.innerText = totalPrice;
+    totalPriceElement.innerText = '$ ' + totalPrice;
 }
 
 function deleteCartItem(item, index) {
