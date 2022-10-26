@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8">
+  <head>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Shopping Cart</title>
+    <script src="js/rollsData.js"></script>
+    <!-- <script defer src="js/script.js"></script> -->
+    <script defer src="js/cart_behavior.js"></script>
+  </head>
+  
+  <body>
+
+    <div class="header">
+        <div class="header_left">
+          <a href=index.html>
+            <img class="logo" src="logo-01.svg" alt="Logo" width="200">
+          </a>
+        </div>  
+  
+        <div class="header_right">
+          <div class="links">
+            <a href="index.html"><div class="nav_item" id="products_link">PRODUCTS</div></a>
+            <a href="cart.html"><div class="nav_item" id="cart_link_active">CART</div></a>
+          </div>
+          <hr>
+          <h2>
+            Shopping Cart
+          </h2>
+        </div>
+      </div>
+
+    <!-- Cart Items -->
+    <div class="cart_container">
+      
+      <template id="cart_item_template">
+        <div class="cart_item">
+          <div class="item_info">
+              <div>
+                  <img class="product_image" src="product_images/original-cinnamon-roll.jpg" width="100" alt="Original Cinnamon Roll">
+              </div>
+              <div class="product_description">
+                  <div class="product_name">Original Cinnamon Roll</div>
+                  <div class="product_glazing">Glazing: Keep original</div>
+                  <div class="product_pack_size">Pack Size: 1</div>
+              </div>
+              <div class="price" id="product_price">$ 2.49</div>
+          </div>
+          <a class="remove_button">Remove</a>
+        </div>
+      </template>
+
+      <hr class="bottom_divider">
+      <div class="cart_summary">
+        <div class="price">
+          <div>Total</div>
+          <div id="total_price">$29.94</div>
+        </div>
+        <p class="checkout_button">Checkout</p>
+      </div>
+
+    </div>
+
+  </body>
+</html>
