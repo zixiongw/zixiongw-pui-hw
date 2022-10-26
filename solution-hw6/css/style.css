@@ -143,6 +143,11 @@ a {
 /*////////// Cart //////////*/
 
 .cart_container {
+    width: 750px;
+    float: right;
+}
+
+.item_container {
     /* display: flex; */
     /* flex-direction: column; */
     width: 750px;

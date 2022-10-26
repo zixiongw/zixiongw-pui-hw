@@ -122,6 +122,7 @@ function addItemToCart() {
 function saveToLocalStorage() {
     const cartString = JSON.stringify(cart);
     localStorage.setItem('storedCart', cartString);
+    console.log('saved: ' + localStorage.getItem('storedCart'));
 }
 
 function retrieveFromLocalStorage() {
@@ -134,7 +135,7 @@ function retrieveFromLocalStorage() {
             Number(cartItem.size),
             Number(cartItem.basePrice)
         )
-        console.log('retrieved' + newItem);
+        console.log('retrieved: ' + newItem);
         cart.push(newItem);
     }
 }
@@ -142,6 +143,8 @@ function retrieveFromLocalStorage() {
 if (localStorage.getItem('storedCart') != null) {
     retrieveFromLocalStorage();
 }
+
+// Clears cart for testing purposes
 
 function clearStorage() {
     cart = [];

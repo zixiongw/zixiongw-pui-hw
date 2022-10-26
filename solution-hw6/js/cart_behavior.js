@@ -42,9 +42,12 @@ function saveToLocalStorage() {
 
 // Display cart items
 
-populateCart();
+repopulateCart();
 
-function populateCart(){
+function repopulateCart(){
+    // Clears existing cart items and remap current array index to each remove button
+    const cartContainerElement = document.querySelector('.item_container');
+    cartContainerElement.innerHTML = '';
     for (let i = 0; i < cart.length; i++) {
         createCartItem(cart[i], i);
     }
@@ -62,14 +65,15 @@ function createCartItem(item, index) {
     const removeButton = item.element.querySelector('.remove_button');
     removeButton.addEventListener('click', () => {
         deleteCartItem(item, index);
+        console.log('item #' + index + ' removed');
         saveToLocalStorage();
     });
     
     updateCartItem(item);
 
     // prepend to parent element
-    const cartContainerElement = document.querySelector('.cart_container');
-    cartContainerElement.prepend(item.element);
+    const cartContainerElement = document.querySelector('.item_container');
+    cartContainerElement.append(item.element);
   }
   
 function updateCartItem(item) {
@@ -91,9 +95,7 @@ function updateCartItem(item) {
 
 function calculatePrice(item) {
     let price = (item.basePrice + glazings[item.glazing]) * packSizes[item.size];
-    // console.log(price + '=' + item.basePrice + '+' + glazings[item.glazing] + '*'+ packSizes[item.size])
     let price_rounded = price.toFixed(2);
-    console.log('item price:' + price_rounded);
     return price_rounded;
 }
 
@@ -103,16 +105,16 @@ function updateTotalPrice() {
         itemPrice = calculatePrice(cart[i]);
         totalPrice = Number(itemPrice) + Number(totalPrice);
         totalPrice = totalPrice.toFixed(2);
-        console.log('total price:' + totalPrice);
     }
     totalPriceElement = document.querySelector('#total_price');
     totalPriceElement.innerText = '$ ' + totalPrice;
 }
 
 function deleteCartItem(item, index) {
-    cart.splice(index);
+    cart.splice(index, 1);
     item.element.remove();
     updateTotalPrice();
     console.log(cart);
+    repopulateCart();
   }
 
