@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!--
+ @license
+ Copyright 2019 Google LLC. All Rights Reserved.
+ SPDX-License-Identifier: Apache-2.0
+-->
+<html lang="en">
+  <meta charset="UTF-8">
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/game.css">
+    <title>Add Map</title>
+
+    <script src="js/the-num.js"></script>
+    <script src="js/cities.js"></script>
+    <script src="js/mapjs.js"></script>
+    <script defer src="js/score.js"></script>
+
+  </head>
+  
+  <body>
+    <header class="header">
+      <div class="header_left">
+        <a class="home_link" href="index.html"><div class="nav_item1" id="home_link">HOME</div></a>
+      </div>  
+
+      <div class="header_right">
+        <div class="nav_item1" id="difficulty_display">Current Difficulty: Easy</div>
+      </div>
+      <div class="header_right">
+        <button class="nav_item2" id="switch_diffculty" onclick="switchDifficulty()">Switch</button>
+      </div>
+    </header>
+    <hr>
+
+
+    <!--The div element for the map -->
+    <div class="game_container">
+      <div class="map_container">
+        <!-- Realtime score on the top left -->
+        <div class="scoreboard"> 
+          <div class="total_score">
+            Total Score: 0
+          </div>
+          <template id="score_item_template">
+            <div class="score_item"></div>
+          </template>
+          <div class="score_list">
+          </div>
+        </div>
+
+        <!-- Hidden game panels -->
+        <div class="confirmation_panel">
+          <div class="confirmation_text">Confirm Location?</div>
+          <div class="confirmation_controls">
+            <button class="confirm_button" onclick="confirmChoice()">Yes</button>
+            <button class="cancel_button" onclick="cancelChoice()">No</button>
+          </div>
+        </div>
+
+        <div class="result_panel">
+          <div class="result_distance">Your guess was km away!</div>
+          <div class="result_score">Score: </div>
+          <div class="result_city_info">London, United Kingdom</div>
+          <div class="button_container">
+            <button class="external_link">
+              <a href="https://en.wikipedia.org/wiki/Madrid" target="_blank">Wikipedia</a>
+            </button>
+            <button class="next_button" onclick="goToNextGuess()">Next City!</button> 
+          </div>
+          
+        </div>
+
+        <div class="current_city_panel">
+          Current City:
+        </div>
+
+        <div class="summary_panel">
+          <div class="closing_message">You have completed the city list!</div>
+          <div class="result_score">Total score: </div>
+          <div class="result_score" id="avg_score">Average score per city: </div>
+          <button class="restart_button" onclick="restartGame()">Restart</button>
+        </div>
+
+        <!-- Map created by Google Maps API -->
+        <div id="map">
+        </div>
+
+        <h1 class="map_title">Map: Western Europe</h1>
+      </div>
+
+      <!-- Information panel on the right -->
+      <div class="info_board">
+        <div class="instructions">
+          <div class="hint">Click on the map to place the city.</div>
+        </div>
+        <div class="city_list">
+          <div class="list_title">
+            Cities coming up...
+          </div>
+          <template id="list_item_template">
+            <div class="list_item"></div>
+          </template>
+          <div class="list_content">
+          </div>
+        </div>
+        <div class="best_scores">
+          Best Score:
+          <div class="list_item">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      async
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDtZu14PEmaII24HkbQpl5Yk56OoBpXHQ&callback=initMap"
+      id="API"
+    ></script>
+
+  </body>
+</html>

@@ -1,0 +1,57 @@
+/*///////// Home Page ///////////*/
+
+body {
+    background-image: url('../images/Homepage.png');
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.welcome {
+    margin-bottom: 5%;
+    font-size: 40px;
+}
+
+.start_button {
+    background-color: #32557D;
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+}
+
+.dev_info {
+    margin-top: 10%;
+    font-size: 25px;
+}
+
+.menu_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(10px);
+}
+.menu {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-size: 40px;
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 40px 20px;
+    width: 40%;
+    height: 50%;
+    border-radius: 50px;
+    backdrop-filter: blur(100px);
+}

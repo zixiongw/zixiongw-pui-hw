@@ -1,0 +1,281 @@
+/*////////// Navigation /////////*/
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 1%;
+    background-color: #32557D;
+}
+
+.header_left {
+    justify-content: flex-start;
+    flex-grow: 2;
+}
+
+.header_right {
+    justify-content: flex-end;
+}
+
+hr {
+    border-top: 5px solid white;
+}
+
+.home_link {
+    text-decoration: none;
+}
+
+.nav_item1 {
+    margin-left: 40px;
+    margin-right: 40px;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+h2 {
+    margin-left: 40px;
+    margin-right: 40px;
+    font-size: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+
+.nav_item2 {
+    margin-left: 40px;
+    margin-right: 40px;
+    font-size: 20px;
+    color: white;
+    background-color: #32557D;
+    text-decoration: none;
+    border-width: 2px;
+    border-radius: 5px;
+    border-color: white;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+
+/*///////// Basic Layout ///////////*/
+
+body {
+    background-image: url('../images/Homepage.png');
+} */
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.game_container {
+    max-height: 900px;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+}
+
+.map_container {
+    height: 75vh;
+    margin-right: 5%;
+    display: flex;
+    justify-content: flex-start;
+    flex-grow: 2;
+    position: relative;
+}
+
+/*////////////// The map /////////////////////*/
+#map {
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+    border-width: 5px;
+    border-color: white;
+    flex-grow: 0.5;
+    position: absolute;
+  }
+
+.map_title {
+    position: absolute;
+    z-index: 9;
+    top: 98.5%;
+    left: 25%;
+    color: white;
+    background-color: #32557D;
+    border-radius: 10px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+
+/*////////////// Scoreboard styles //////////////*/
+
+.scoreboard {
+    flex-grow: 2;
+    position: absolute;
+    z-index: 9;
+    top: 20px;
+    left: 20px;
+    background-color: #32557D;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+}
+
+
+.total_score {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/*////////////// Confirmation popup styles //////////////*/
+
+.confirmation_panel {
+    flex-grow: 2;
+    position: absolute;
+    z-index: 9;
+    top: 20px;
+    left: 45%;
+    background-color: #32557D;
+    border-radius: 5px;
+    padding: 10px;
+    display: none;
+}
+
+.confirmation_text {
+    color: white;
+}
+
+.confirmation_controls {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5px;
+}
+
+.confirm_button {
+    color: white;
+    background-color: green;
+}
+
+.cancel_button {
+    color: white;
+    background-color: maroon;
+}
+
+/*////////////// Result popup styles //////////////*/
+
+.result_panel {
+    position: absolute;
+    z-index: 9;
+    top: 50%;
+    left: 45%;
+    background-color: #32557D;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    display: none;
+}
+
+.result_city_info {
+    margin-top: 15px;
+}
+
+.result_distance {
+    color: #FFD600;
+}
+
+.result_score {
+    color: #FFD600;
+}
+
+.button_container {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.current_city_panel {
+    position: absolute;
+    z-index: 9;
+    top: 3%;
+    left: 80%;
+    background-color: #32557D;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+}
+
+/*////////////// Game summary popup styles //////////////*/
+
+.summary_panel {
+    position: absolute;
+    z-index: 9;
+    top: 50%;
+    left: 45%;
+    background-color: #32557D;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    display: none;
+    flex-direction: column;
+}
+
+.restart_button {
+    margin-top: 10px;
+}
+
+.closing_message {
+    margin-bottom: 10px;
+}
+
+/*////////////// Right information board styles //////////////*/
+
+.info_board {
+    /* font-size: 15px;
+    border-radius: 25px;
+    padding: 40px;
+    background-color: white; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.instructions {
+    font-size: 15px;
+    border-radius: 25px;
+    padding: 40px;
+    background-color: white;    
+    inline-size: 150px;
+    overflow-wrap: break-word;
+}
+
+.current_city {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.list_title {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.city_list {
+    font-size: 15px;
+    border-radius: 25px;
+    padding: 40px;
+    background-color: white;
+}
+
+.best_scores {
+    font-size: 15px;
+    border-radius: 25px;
+    padding: 40px;
+    background-color: white;
+    display: none;
+}
+
+
